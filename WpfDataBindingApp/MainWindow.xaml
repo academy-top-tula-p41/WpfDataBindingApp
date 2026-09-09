@@ -1,0 +1,109 @@
+﻿<Window x:Class="WpfDataBindingApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDataBindingApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Company Title" />
+                <TextBox Text="Yandex" />
+            </StackPanel>
+            <StackPanel Grid.Column="1"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <Button x:Name="buttonCompanySave"
+                        Click="buttonCompanySave_Click"
+                        Content="Company Save"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Employee Name" />
+                <TextBox Text="" />
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="Age" />
+                <TextBox Text="" />
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <TextBlock Text="Company Title" />
+                <TextBlock Text="" />
+            </StackPanel>
+            <StackPanel Grid.Column="3"
+                        VerticalAlignment="Center">
+                <Button x:Name="buttonEmployeeSave"
+                        Click="buttonEmployeeSave_Click"
+                        Content="Employee Save"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Name"/>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Age"/>
+            <TextBlock Grid.Row="2"
+                       Grid.Column="0"
+                       Text="Company"/>
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="1"
+                       Text="{}"/>
+            <TextBlock Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{}"/>
+            <TextBlock Grid.Row="2"
+                       Grid.Column="1"
+                       Text="{}"/>
+
+
+        </Grid>
+    </Grid>
+</Window>
