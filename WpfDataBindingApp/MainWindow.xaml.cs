@@ -9,6 +9,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using WpfDataBindingApp.Models;
+using WpfDataBindingApp.ViewModels;
+
 namespace WpfDataBindingApp
 {
     /// <summary>
@@ -19,6 +22,8 @@ namespace WpfDataBindingApp
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new ApplicationViewModel();
         }
 
         private void buttonCompanySave_Click(object sender, RoutedEventArgs e)
